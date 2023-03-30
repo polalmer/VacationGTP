@@ -1,63 +1,65 @@
 <!-- Platz für das Bild -->
-
-<div class="form-group">
-    <label for="zielInput">Ziel:</label>
-    <input type="text" id="zielInput" class="form-control" @bind="Ziel" />
-</div>
-
-<div class="form-group">
-    <label for="monatDropdown">Monat:</label>
-    <select id="monatDropdown" class="form-control" @bind="SelectedMonat">
-        <option value="Januar">Januar</option>
-        <option value="Februar">Februar</option>
-        <option value="März">März</option>
-        <option value="April">April</option>
-        <option value="Mai">Mai</option>
-        <option value="Juni">Juni</option>
-        <option value="Juli">Juli</option>
-        <option value="August">August</option>
-        <option value="September">September</option>
-        <option value="Oktober">Oktober</option>
-        <option value="November">November</option>
-        <option value="Dezember">Dezember</option>
-    </select>
-</div>
-
-<div>
-    <label for="NamenList">Personen:</label>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" @bind="NewItem" />
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" @onclick="AddItem">Add</button>
-        </div>
+<div class="InputFrom">
+    <div class="form-group">
+        <label for="zielInput">Ziel:</label>
+        <input type="text" id="zielInput" class="form-control" @bind="Ziel" />
     </div>
-    <ul class="list-group">
-        @foreach (var item in Personen)
-        {
-            <li class="list-group-item">@item <button class="btn btn-link" @onclick="() => RemoveItem(item)">Remove</button></li>
-        }
-    </ul>
+
+    <div class="form-group">
+        <label for="monatDropdown">Monat:</label>
+        <select id="monatDropdown" class="form-control" @bind="SelectedMonat">
+            <option value="Januar">Januar</option>
+            <option value="Februar">Februar</option>
+            <option value="März">März</option>
+            <option value="April">April</option>
+            <option value="Mai">Mai</option>
+            <option value="Juni">Juni</option>
+            <option value="Juli">Juli</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="Oktober">Oktober</option>
+            <option value="November">November</option>
+            <option value="Dezember">Dezember</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="NamenList">Personen:</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" @bind="NewItem" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" @onclick="AddItem">Add</button>
+            </div>
+        </div>
+        <ul class="list-group">
+            @foreach (var item in Personen)
+            {
+                <li class="list-group-item">@item <button class="btn btn-link" @onclick="() => RemoveItem(item)">Remove</button></li>
+            }
+        </ul>
+    </div>
+
+    <div class="form-group">
+        <label for="artInput">Art:</label>
+        <input type="text" id="artInput" class="form-control" @bind="Art" />
+    </div>
+
+    <div class="form-group">
+        <label for="monatDropdown">Monat:</label>
+        <select id="monatDropdown" class="form-control" @bind="SelectedType">
+            <option value="Wellness">Welness</option>
+            <option value="Wandern">Wandern</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="WunschInput">Wunsch:</label>
+        <input type="text" id="artInput" class="form-control" @bind="Wunsch" />
+    </div>
+
+    <button class="btn btn-primary" @onclick="SubmitForm">Submit</button>   
 </div>
 
-<div class="form-group">
-    <label for="artInput">Art:</label>
-    <input type="text" id="artInput" class="form-control" @bind="Art" />
-</div>
-
-<div class="form-group">
-    <label for="monatDropdown">Monat:</label>
-    <select id="monatDropdown" class="form-control" @bind="SelectedType">
-        <option value="Wellness">Welness</option>
-        <option value="Wandern">Wandern</option>
-    </select>
-</div>
-
-<div class="form-group">
-    <label for="WunschInput">Wunsch:</label>
-    <input type="text" id="artInput" class="form-control" @bind="Wunsch" />
-</div>
-
-<button class="btn btn-primary" @onclick="SubmitForm">Submit</button>
 
 <!-- Antwort Text-->
 
