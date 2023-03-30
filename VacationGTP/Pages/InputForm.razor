@@ -1,28 +1,71 @@
 <h1>Input Form</h1>
 
-<label for="dropdown1">Dropdown 1:</label>
-<select id="dropdown1" @bind="SelectedDropdown1">
-    <option value="Option 1">Option 1</option>
-    <option value="Option 2">Option 2</option>
-    <option value="Option 3">Option 3</option>
-</select>
+<div class="form-group">
+    <label for="zielInput">Ziel:</label>
+    <input type="text" id="zielInput" class="form-control" @bind="Ziel" />
+</div>
 
-<label for="dropdown2">Dropdown 2:</label>
-<select id="dropdown2" @bind="SelectedDropdown2">
-    <option value="Option A">Option A</option>
-    <option value="Option B">Option B</option>
-    <option value="Option C">Option C</option>
-</select>
+<div class="form-group">
+    <label for="artInput">Art:</label>
+    <input type="text" id="artInput" class="form-control" @bind="Art" />
+</div>
 
-<label for="textInput">Text Input:</label>
-<input type="text" id="textInput" @bind="TextInput" />
+<div class="form-group">
+    <label for="monatDropdown">Monat:</label>
+    <select id="monatDropdown" class="form-control" @bind="SelectedMonat">
+        <option value="Januar">Januar</option>
+        <option value="Februar">Februar</option>
+        <option value="März">März</option>
+        <option value="April">April</option>
+        <option value="Mai">Mai</option>
+        <option value="Juni">Juni</option>
+        <option value="Juli">Juli</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="Oktober">Oktober</option>
+        <option value="November">November</option>
+        <option value="Dezember">Dezember</option>
+    </select>
+</div>
+
+<div>
+    <label for="NamenList">Personen:</label>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" @bind="NewItem" />
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" @onclick="AddItem">Add</button>
+        </div>
+    </div>
+    <ul class="list-group">
+        @foreach (var item in Personen)
+        {
+            <li class="list-group-item">@item <button class="btn btn-link" @onclick="() => RemoveItem(item)">Remove</button></li>
+        }
+    </ul>
+</div>
 
 <button class="btn btn-primary" @onclick="SubmitForm">Submit</button>
 
 @code {
-    private string SelectedDropdown1 { get; set; }
-    private string SelectedDropdown2 { get; set; }
-    private string TextInput { get; set; }
+    private string Ziel { get; set; }
+    private string Art { get; set; }
+    private string SelectedMonat { get; set; }
+    private List<string> Personen { get; set; } = new List<string>();
+    private string NewItem { get; set; }
+
+    private void AddItem()
+    {
+        if (!string.IsNullOrWhiteSpace(NewItem))
+        {
+            Personen.Add(NewItem);
+            NewItem = string.Empty;
+        }
+    }
+
+    private void RemoveItem(string item)
+    {
+        Personen.Remove(item);
+    }
 
     private void SubmitForm()
     {
