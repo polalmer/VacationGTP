@@ -124,6 +124,43 @@
         }
       },
       {
+        "HashCode": -845991762,
+        "Kind": "Components.Component",
+        "Name": "VacationGTP.Pages.InputForm",
+        "AssemblyName": "VacationGTP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "InputForm"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "VacationGTP.Pages.InputForm",
+          "Common.TypeNamespace": "VacationGTP.Pages",
+          "Common.TypeNameIdentifier": "InputForm"
+        }
+      },
+      {
+        "HashCode": -672119639,
+        "Kind": "Components.Component",
+        "Name": "VacationGTP.Pages.InputForm",
+        "AssemblyName": "VacationGTP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "VacationGTP.Pages.InputForm"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "VacationGTP.Pages.InputForm",
+          "Common.TypeNamespace": "VacationGTP.Pages",
+          "Common.TypeNameIdentifier": "InputForm",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 982560160,
         "Kind": "Components.Component",
         "Name": "VacationGTP.App",
@@ -18736,6 +18773,11 @@
     {
       "FilePath": "c:\\Users\\palzer\\Desktop\\VacationGTP\\VacationGTP\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\palzer\\Desktop\\VacationGTP\\VacationGTP\\Pages\\InputForm.razor",
+      "TargetPath": "Pages\\InputForm.razor",
       "FileKind": "component"
     },
     {

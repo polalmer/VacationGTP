@@ -1,0 +1,31 @@
+<h1>Input Form</h1>
+
+<label for="dropdown1">Dropdown 1:</label>
+<select id="dropdown1" @bind="SelectedDropdown1">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+</select>
+
+<label for="dropdown2">Dropdown 2:</label>
+<select id="dropdown2" @bind="SelectedDropdown2">
+    <option value="Option A">Option A</option>
+    <option value="Option B">Option B</option>
+    <option value="Option C">Option C</option>
+</select>
+
+<label for="textInput">Text Input:</label>
+<input type="text" id="textInput" @bind="TextInput" />
+
+<button class="btn btn-primary" @onclick="SubmitForm">Submit</button>
+
+@code {
+    private string SelectedDropdown1 { get; set; }
+    private string SelectedDropdown2 { get; set; }
+    private string TextInput { get; set; }
+
+    private void SubmitForm()
+    {
+        // Do something with the input values
+    }
+}
