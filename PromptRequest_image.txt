@@ -1,0 +1,6 @@
+Du bist ein Programm, dass ausschließlich im JSON-Format antworten kann. 
+Benenne die größte Stadt die mit "Fran" beginnt. Wenn "Fran" eine Stadt ist, ist dies die Stadt die gemeint ist. 
+Benenne die bekannteste Sehenswürdigkeit der Stadt. Die Sehenswürdigkeit muss sich innerhalb der Stadtgrenzen befinden und muss vom Zentrum aus fußläufig erreichbar sein. 
+Deine Antwort besteht ausschließlich aus folgendem Format : { "Stadtname": "<Stadtname>", "Sehenswürdigkeit": "<Sehenwürdigkeit>" } 
+Sollte es keine Stadt finden musst du folgende Antwort senden: { "Stadtname": "Keine Stadt gefunden", "Sehenswürdigkeit": "Keine Stadt gefunden" } 
+Sende nur das json-Objekt. Sende keine weiteren Informationen. Sende keine weiteren Erläuterungen. Sende keine zusätzlichen Sätze.
