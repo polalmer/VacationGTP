@@ -1,13 +1,8 @@
-<h1>Input Form</h1>
+<!-- Platz für das Bild -->
 
 <div class="form-group">
     <label for="zielInput">Ziel:</label>
     <input type="text" id="zielInput" class="form-control" @bind="Ziel" />
-</div>
-
-<div class="form-group">
-    <label for="artInput">Art:</label>
-    <input type="text" id="artInput" class="form-control" @bind="Art" />
 </div>
 
 <div class="form-group">
@@ -44,12 +39,34 @@
     </ul>
 </div>
 
+<div class="form-group">
+    <label for="artInput">Art:</label>
+    <input type="text" id="artInput" class="form-control" @bind="Art" />
+</div>
+
+<div class="form-group">
+    <label for="monatDropdown">Monat:</label>
+    <select id="monatDropdown" class="form-control" @bind="SelectedType">
+        <option value="Wellness">Welness</option>
+        <option value="Wandern">Wandern</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="WunschInput">Wunsch:</label>
+    <input type="text" id="artInput" class="form-control" @bind="Wunsch" />
+</div>
+
 <button class="btn btn-primary" @onclick="SubmitForm">Submit</button>
+
+<!-- Antwort Text-->
 
 @code {
     private string Ziel { get; set; }
     private string Art { get; set; }
     private string SelectedMonat { get; set; }
+    private string SelectedType { get; set; }
+    private string Wunsch { get; set; }
     private List<string> Personen { get; set; } = new List<string>();
     private string NewItem { get; set; }
 
